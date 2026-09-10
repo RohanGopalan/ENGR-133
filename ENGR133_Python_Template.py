@@ -1,6 +1,6 @@
 """
 Course Number: ENGR 13300
-Semester: Spring 2026
+Semester: Fall 2026
 
 Description:
     Replace this line with a description of your program.
@@ -14,11 +14,11 @@ Assignment Information:
 Contributors:
 
     My contributor(s) helped me:
-    [ ] understand the assignment expectations without
+    [X] understand the assignment expectations without
         telling me how they will approach it.
-    [ ] understand different ways to think about a solution
+    [X] understand different ways to think about a solution
         without helping me plan my solution.
-    [ ] think through the meaning of a specific error or
+    [X] think through the meaning of a specific error or
         bug present in my code without looking at my code.
     Note that if you helped somebody else with their code, you
     have to list that person as a contributor here as well.
