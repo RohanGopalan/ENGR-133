@@ -3,13 +3,13 @@ Course Number: ENGR 13300
 Semester: Fall 2026
 
 Description:
-    Replace this line with a description of your program.
+    Inputs value for first capacitor, initializes second capacitor to e^3 * sqrt(5), then computes parallel and series capacitance, then displays it.
 
 Assignment Information:
-    Assignment:     Py1 Pre 0
+    Assignment:     Py1 Ind 2
     Team ID:        LC2 - 04
     Author:         Rohan Gopalan, gopalanr@purdue.edu
-    Date:           e.g. 01/23/2026
+    Date:           e.g. 09/13/2026
 
 Contributors:
 
@@ -30,11 +30,22 @@ Academic Integrity Statement:
     submitting is my own original work.
 """
 
-""" Write any import statements here (and delete this line)."""
-
+from math import e, sqrt
 
 def main():
-    """Write your code here (and delete this line)."""
+    # get values for both capacitor values
+    c1 = float(input("Input the capacitance of the first capacitor [\u03bcF]: "))
+    c2 = e**3 * sqrt(5)
+
+    # calculate parallel and series capacitance
+    parallel = c1 + c2
+    series = 1 / (1 / c1 + 1 / c2)
+
+    # display the results in a table format
+    # didn't use 10.2f because I couldn't get the spacing to work properly, so I did it manually
+    print(f"{'Type':<15}{'First':<11}{'Second':<12}{'Total'}")
+    print(f"{'Series':<13}{c1:.1f} μF     {c2:.1f} μF     {series:.1f} μF")
+    print(f"{'Parallel':<13}{c1:.1f} μF     {c2:.1f} μF     {parallel:.1f} μF")
 
 
 if __name__ == "__main__":

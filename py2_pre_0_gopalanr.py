@@ -6,10 +6,10 @@ Description:
     Replace this line with a description of your program.
 
 Assignment Information:
-    Assignment:     Py1 Pre 0
+    Assignment:     Py2 Pre 0
     Team ID:        LC2 - 04
     Author:         Rohan Gopalan, gopalanr@purdue.edu
-    Date:           e.g. 01/23/2026
+    Date:           09/11/2026
 
 Contributors:
 
@@ -30,12 +30,29 @@ Academic Integrity Statement:
     submitting is my own original work.
 """
 
-""" Write any import statements here (and delete this line)."""
+import math
 
 
 def main():
-    """Write your code here (and delete this line)."""
+    # input and initialize variables
 
+    a = float(input("Input a number for variable a: "))
+    b = 135
+    c = 3
+
+    # call the calc_perform function
+    result = calc_perform(a, b, c)
+    print(f"The result of the function was {result:.2f}")
+
+    
+
+def calc_perform(a, b, c):
+    # use the if statement to determine which equation to use based on the value of a
+    if (a > 4):
+        answer = (a*a + math.cos(b) - math.log(c)) / (b - (a * c))
+    else:
+        answer = (math.sqrt(a+b)) / (math.factorial(c) + math.sin(b))
+    return answer
 
 if __name__ == "__main__":
     main()
