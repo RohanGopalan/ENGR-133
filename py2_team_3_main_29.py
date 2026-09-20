@@ -3,13 +3,13 @@ Course Number: ENGR 13300
 Semester: Fall 2026
 
 Description:
-    Inputs value for first capacitor, initializes second capacitor to e^3 * sqrt(5), then computes parallel and series capacitance, then displays it.
+    Replace this line with a description of your program.
 
 Assignment Information:
-    Assignment:     Py1 Ind 2
-    Team ID:        LC2 - 04
+    Assignment:     14.2.3 Py2 Team 3 main
+    Team ID:        LC2 - 29
     Author:         Rohan Gopalan, gopalanr@purdue.edu
-    Date:           e.g. 09/13/2026
+    Date:           09/18/2026
 
 Contributors:
 
@@ -30,23 +30,33 @@ Academic Integrity Statement:
     submitting is my own original work.
 """
 
-from math import e, sqrt
+import py2_team_3_escape_velocity_29 as ev
+import py2_team_3_mass_29 as mass
+import py2_team_3_volume_29 as volume
 
 
 def main():
-    # get values for both capacitor values
-    c1 = float(input("Input the capacitance of the first capacitor [\u03bcF]: "))
-    c2 = e**3 * sqrt(5)
 
-    # calculate parallel and series capacitance
-    parallel = c1 + c2
-    series = 1 / (1 / c1 + 1 / c2)
+    # initialize the gravitational constant
+    G = 6.67430e-11
 
-    # display the results in a table format
-    # didn't use 10.2f because I couldn't get the spacing to work properly, so I did it manually
-    print(f"{'Type':<15}{'First':<11}{'Second':<12}{'Total'}")
-    print(f"{'Series':<13}{c1:.1f} μF     {c2:.1f} μF     {series:.1f} μF")
-    print(f"{'Parallel':<13}{c1:.1f} μF     {c2:.1f} μF     {parallel:.1f} μF")
+    # get user input for density and radius
+    rho = float(input("Enter the average density of the planet: "))
+    radius = float(input("Enter the radius of the planet: "))
+
+    # calculate volume, mass, and escape velocity
+    vol = volume.calc_volume(radius)
+    m = mass.calc_mass(rho, vol)
+    escapevelo = ev.calc_escape_velocity(G, m, radius)
+
+    # convert radius to km
+    radius /= 1000
+
+    # print results
+
+    print(
+        f"For a planet with radius {radius:,.1f} km and density {rho:,.2f} kg/m^3, the estimated escape velocity is {escapevelo:,.2f} m/s"
+    )
 
 
 if __name__ == "__main__":

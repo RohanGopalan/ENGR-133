@@ -3,22 +3,23 @@ Course Number: ENGR 13300
 Semester: Fall 2026
 
 Description:
-    Replace this line with a description of your program.
+    Calculate the mass
 
 Assignment Information:
-    Assignment:     Py1 Pre 0
+    Assignment:     14.2.3 Py2 Team 3 mass
     Team ID:        LC2 - 29
-    Author:         Rohan Gopalan, gopalanr@purdue.edu
-    Date:           e.g. 01/23/2026
+    Author:         Anay Guturi, aguturi@purdue.edu
+    Date:           09/18/2026
 
 Contributors:
 
+
     My contributor(s) helped me:
-    [X] understand the assignment expectations without
+    [X ] understand the assignment expectations without
         telling me how they will approach it.
-    [X] understand different ways to think about a solution
+    [X ] understand different ways to think about a solution
         without helping me plan my solution.
-    [X] think through the meaning of a specific error or
+    [X ] think through the meaning of a specific error or
         bug present in my code without looking at my code.
     Note that if you helped somebody else with their code, you
     have to list that person as a contributor here as well.
@@ -30,11 +31,16 @@ Academic Integrity Statement:
     submitting is my own original work.
 """
 
-""" Write any import statements here (and delete this line)."""
+
+def calc_mass(density, volume):
+    # define the function to calculate mass
+    mass = density * volume
+    return mass
 
 
 def main():
-    """Write your code here (and delete this line)."""
+    # nothing here since this is just for the calc_mass function
+    pass
 
 
 if __name__ == "__main__":
