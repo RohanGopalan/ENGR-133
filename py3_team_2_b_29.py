@@ -6,7 +6,7 @@ Description:
     Uses several nested loops to build and print several values with a matrix
 
 Assignment Information:
-    Assignment:     Py3 Team 2
+    Assignment:     Py3 Team 2 b
     Team ID:        LC2 - 29
     Author:         Rohan Gopalan, gopalanr@purdue.edu
     Date:           9/22/2026
@@ -32,17 +32,24 @@ Academic Integrity Statement:
     submitting is my own original work.
 """
 
+from math import factorial
 
-def factorial(n):
-    if n == 1:
+
+def my_factorial(n):
+    # check for valid inputs
+    if n < 0:
+        return -999
+    elif n == 1:
         # We've hit the bottom of the recursion! RETREAT!
         return n
     elif n == 0:
         # Special case: Return 1 for 0
         return 1
+    elif n > 1500:
+        return factorial(n)
     else:
         # We use recursion because we're cool like that (and it's way simpler than a loop)
-        return n * factorial(n - 1)
+        return n * my_factorial(n - 1)
 
 
 def main():
@@ -50,12 +57,12 @@ def main():
     # prompt user to input a number
     num = int(input("Enter a number: "))
 
-    # first, check for valid inputs
-    # then initiate the recursive factorial function and print the result
-    if num < 0:
-        print("Error -999 [Negative Input]")
+    # initiate the recursive factorial function and print the result
+    facted = my_factorial(num)
+    # Check for valid input but again
+    if facted == -999:
+        print("Error -999 [Negative input].")
     else:
-        facted = factorial(num)
         print(f"The Factorial of {num} is {facted}.")
 
 
